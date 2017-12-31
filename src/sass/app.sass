@@ -1,2 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+*
+  transition: all .5s ease
+  font-family: 'Lato'
+  font-weight: 300
+  padding: 0px
+  margin: 0px
+
 body
-  background: #fafafa;
+  background: linear-gradient(to right, #42013b , #900064)
+
+  .custom__item
+    background: #fff
+    min-height: 40px
+    margin-top: 5px
+    display: flex
+    align-items: center
+    padding: 5px 20px 5px
+    border-bottom-left-radius: 2em
+    border-bottom-right-radius: 2em
+    border-top-right-radius: 2em
+    display: flex
+    justify-content: space-between
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .2)
+
+  .custom__btn
+    width: 45px
+    height: 45px
+    border-radius: 50%
+    color: #42013b
+    background: #ffffff
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.4)
+    &:hover
+      background: #eee
+
+.timeLine
+  width: 100%
+  min-height: calc(100vh - 60px)
+  margin-top: 60px
+  display: flex
+  align-items: center
+  flex-direction: column
+
+  .timeLine__addPublication
+    @extend  .custom__btn
+    position: fixed
+    top: 15px
+    right: 15px
+
+  .publication
+    width: 30%
+    min-width: 280px
+    height: auto
+    margin-bottom: 20px
+
+    .publication__userName
+      color: white
+
+    .publication__content
+      @extend .custom__item
+      
+      .publication__content__likes
+        display: flex
+        justify-content: center
+        align-items: center
+        span
+          font-size: .6em
+          margin-left: 2px
+        i
+          font-size: 1.2em
+          color: red
+          cursor: pointer
+
+.addPublication
+  width: 100%
+  height: 100vh
+  position: fixed
+  z-index: 2
+  top: 0px
+  background-color: rgba(0, 0, 0, .85)
+  display: flex
+  justify-content: center
+  align-items: center
+  .custom__item
+    border: none
+    outline: none
+    width: calc(100% - 40px)
+    margin: 20px 0px
+  form
+    margin-top: -10%
+    width: 30%
+    min-width: 280px
+    overflow: hidden
+    .addPublication__btns
+      display: flex
+      justify-content: center
+      input
+        margin-left: 10px
+    input
+      border: none
+    
